@@ -1,0 +1,16 @@
+body {
+    padding-top: 60px !important;
+    padding-bottom: 40px !important;
+}
+.sidebar-nav {
+    padding: 9px 0 15px !important;
+    position: fixed !important;
+}
+@media (max-width: 980px) {
+    /* Enable use of floated navbar text */
+    .navbar-text.pull-right {
+        float: none !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+}

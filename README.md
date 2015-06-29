@@ -3,7 +3,8 @@ API地址: http://host/sendmail
 签名算法: sign = md5($sender.$recipient.$time.$key);  
 密钥key为"nNgvTlMWYzLFyW2k"  
 请求参数:  
-sender	发送邮箱，若为空则默认为内网通知账号cx-notice-infomation@joyport.com  
+  
+sender	发送邮箱，若为空则默认
 recipient	收件邮箱，多个收件人用分号";"分隔  
 cc	抄送邮箱，多个抄送人用分号";"分隔，可为空  
 bcc	密送邮箱，多个密送人用分号";"分隔，可为空  
@@ -37,3 +38,4 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);  
 $output = curl_exec($ch);  
 curl_close($ch);  
+  

@@ -21,9 +21,7 @@ public class MailServer_db {
 		String dbname=null;
 		Properties properties = new Properties();
 		try {
-//			InputStream in = new BufferedInputStream(new FileInputStream("/MySQL.properties"));
 			InputStream in = MailServer_db.class.getResourceAsStream("MySQL.properties");
-//			ResourceBundle rb = ResourceBundle.getBundle("MySQL.properties", Locale.getDefault());
 			properties.load(in);
 			driver=properties.getProperty("driver");
 			host=properties.getProperty("mysql.servers.master.0.host");
@@ -31,19 +29,11 @@ public class MailServer_db {
 			pwd=properties.getProperty("mysql.servers.master.0.password");
 			port=properties.getProperty("mysql.servers.master.0.port");
 			dbname=properties.getProperty("mysql.servers.master.0.dbname");
-//			driver="com.mysql.jdbc.Driver";
-//			host="rdsar6zfvjzbyuu.mysql.rds.aliyuncs.com";
-//			port="3306";
-//			dbname="platform";
-//			username="plat_user";
-//			pwd="Joyport2015";
 			Class.forName(driver);
 			String url="jdbc:mysql://"+host+":"+port+"/"+dbname;
 			connecter=DriverManager.getConnection(url,username,pwd);
 	        if(!connecter.isClosed()) System.out.println("success in getConnetion");
 	        statement = connecter.createStatement(); 
-//	        String database="CREATE DATABASE if not exists email_Proxy  DEFAULT CHARSET=utf8";
-//	        statement.executeUpdate(database);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

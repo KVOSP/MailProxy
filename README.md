@@ -1,12 +1,12 @@
-API地址: [http://host/sendmail]
+API地址: [http://host/sendmail]  
 
-<br/>请求方法: GET/POST   请求长度大于2083字符必须用post
+<br/>请求方法: GET/POST   请求长度大于2083字符必须用post  
 
-签名算法: sign = md5($sender.$recipient.$time.$key);
+签名算法: sign = md5($sender.$recipient.$time.$key);  
 
-<br/>密钥key为"nNgvTlMWYzLFyW2k"
+<br/>密钥key为"nNgvTlMWYzLFyW2k"  
 
-请求参数:
+请求参数:  
 
 {| style="width: 500px" border="1" cellspacing="1" cellpadding="1"
 |-
@@ -45,7 +45,7 @@ API地址: [http://host/sendmail]
 
 <br/>以php代码示例
 
- $postData = 
+` $postData = 
             "sender=".$sender."&".
             "recipient=".$recipient."&".
             "cc=".$cc."&".
@@ -67,4 +67,4 @@ API地址: [http://host/sendmail]
  curl_setopt($ch, CURLOPT_POST, 1);
  curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
  $output = curl_exec($ch);
- curl_close($ch);
+ curl_close($ch);`

@@ -18,7 +18,7 @@ import java.io.*;
 @WebServlet(name = "SendMail")
 public class SendMail extends HttpServlet {
     private final static String key = "nNgvTlMWYzLFyW2k";
-    private final static String defaultServer = "cx-notice-infomation@joyport.com";
+    private final static String defaultServer = "";
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String mailAddress = java.net.URLDecoder.decode(request.getParameter("sender"), "UTF-8");
         String recipient = java.net.URLDecoder.decode(request.getParameter("recipient"), "UTF-8");

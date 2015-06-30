@@ -1,4 +1,4 @@
-## MailProxy
+# Introduction
 API地址: http://host/sendmail  
 请求方法: GET/POST 请求长度大于2083字符必须用post  
 签名算法: sign = md5($sender.$recipient.$time.$key);  
